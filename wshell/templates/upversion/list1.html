@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <table class="table table-bordered table7_demo">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>名称</th>
+            <th>位置</th>
+            <th>日期</th>
+            <th>类型</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="label label-info">Active</span>
+            </td>
+            <td>
+                <button class="btn btn-xs btn-success" title="激活">
+                    <i class="glyphicon glyphicon-ok"></i>
+                </button>
+                <button class="btn btn-xs btn-warning" title="编辑">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </button>
+                <button class="btn btn-xs btn-danger" title="删除">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="label label-danger">Banned</span>
+            </td>
+            <td>
+                <button class="btn btn-xs btn-inverse" title="激活">
+                    <i class="glyphicon glyphicon-ok"></i>
+                </button>
+                <button class="btn btn-xs btn-inverse" title="编辑">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </button>
+                <button class="btn btn-xs btn-inverse" title="删除">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="label label-success">Active</span>
+            </td>
+            <td>
+                <button class="btn btn-xs btn-success" title="激活">
+                    <i class="glyphicon glyphicon-ok"></i>
+                </button>
+                <button class="btn btn-xs btn-warning" title="编辑">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </button>
+                <button class="btn btn-xs btn-danger" title="删除">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="label label-danger">Banned</span>
+            </td>
+            <td>
+                <button class="btn btn-xs btn-success" title="激活">
+                    <i class="glyphicon glyphicon-ok"></i>
+                </button>
+                <button class="btn btn-xs btn-warning" title="编辑">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </button>
+                <button class="btn btn-xs btn-danger" title="删除">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="label label-danger">Banned</span>
+            </td>
+            <td>
+                <button class="btn btn-xs btn-success" title="激活">
+                    <i class="glyphicon glyphicon-ok"></i>
+                </button>
+                <button class="btn btn-xs btn-warning" title="编辑">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </button>
+                <button class="btn btn-xs btn-danger" title="删除">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+    <div class="king-page-box">
+        <div class="king-layout1-header"></div>
+        <div class="king-layout2-main mt15" style="width:960px;">
+            <form class="form-horizontal">
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">job名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" id="jobname" value="{{ job_name }}"readonly="readonly"> </div>
+                </div>
+                 <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">job ID：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" id="jobid" value="{{ job_id }}"readonly="readonly"> </div>
+                </div>
+                 <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">主机名称：</label>
+                    <div class="col-sm-9">
+                        <select name="" id="hostname" class="form-control bk-valign-top">
+                            {% for host in host_list %}
+                            <option value="{{ host.hostname }}">{{ host.hostname }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">参数：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" id="parameter" placeholder="参数值"> </div>
+                </div>
+                <div class="form-group has-feedback clearfix f14">
+                    <label class="control-label col-sm-3 pt0" for="introduction">job内容：</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="3" placeholder="{{ show_job }}" style="margin: 0px; height: 324px; width: 738px;" readonly="readonly"></textarea>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="button" class="king-btn mr10  king-success" id="Execute" value="Execute">执行</button>
+                        <a href="/bsl/job_list/"> <button type="button" class="king-btn king-default ">取消</button></a>
+                        <button type="button" class="king-btn mr9  king-success" id="stopexec" value="stopexec">停止执行</button>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                     <label class="control-label col-sm-3 pt0" for="introduction">返回结果：</label>
+                    <div class="king-layout2-main mt15" style="width:100%;">
+                    <div class="king-instruction  king-instruction-info ">
+                <h5>提示说明</h5>
+                <p>运行结果实时显示在此处，暂无历史记录保存.</p>
+                <div id="messagelog" style="margin: 20px;">
+                </div>
+                        <pre id="output_append"  ></pre>
+            </div>
+
+        </div>
+    </div>
+            </form>
+        </div>
+    </div>
+
+ <script type="text/javascript">
+     var socket = new WebSocket("ws://" + window.location.host + "/bsl/run_job/?id=");
+        socket.onmessage = function(e) {
+        var data = JSON.parse(e.data);
+        var message = data['message'];
+        var output_html = ''
+        if (status == 0) {
+            output_html = message + '\n';
+        }
+        else if (status == 1) {
+            $('#output_append').empty();
+            output_html = message;
+        }
+        $("#output_append").append(output_html);
+        };
+
+      document.querySelector('#Execute').onclick = function(e) {
+        var messagejobid= document.querySelector('#jobid');
+        var jobid = messagejobid.value;
+        var messagehostname = document.querySelector('#hostname');
+        var hostname = messagehostname.value;
+        var messageparameter = document.querySelector('#parameter');
+        var parameter = messageparameter.value;
+        var stopexec = 0;
+        socket.send(JSON.stringify({
+            'jobid': jobid,
+            'hostname': hostname,
+            'parameter': parameter,
+            'stopexec': stopexec
+        }));
+    };
+       document.querySelector('#stopexec').onclick = function(e) {
+        var stopexec = 1;
+        socket.send(JSON.stringify({
+            'stopexec': stopexec
+
+        }));
+    };
+</script>
+{% endblock %}

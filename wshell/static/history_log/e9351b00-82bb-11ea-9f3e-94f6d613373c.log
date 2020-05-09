@@ -1,0 +1,9 @@
+Mon Apr 20 12:03:37 CST 2020
+anaconda-ks.cfg
+/tmp/194b6aec-fed7-11e9-86d9-94f6d613373c.sh: line 3: ll: command not found
+.   anaconda-ks.cfg  .bash_logout   .bashrc  .mysql_history  .tcshrc
+..  .bash_history    .bash_profile  .cshrc   .ssh
+total 4
+-rw------- 1 root root 2710 Dec 15  2015 anaconda-ks.cfg
+0
+

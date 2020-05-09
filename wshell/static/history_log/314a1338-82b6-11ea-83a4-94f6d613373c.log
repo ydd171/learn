@@ -1,0 +1,12 @@
+anaconda-ks.cfg
+Mon Apr 20 11:22:41 CST 2020
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          59G  5.5G   50G  10% /
+tmpfs            64M     0   64M   0% /dev
+tmpfs          1000M     0 1000M   0% /sys/fs/cgroup
+osxfs           466G  119G  343G  26% /tmp
+/dev/sda1        59G  5.5G   50G  10% /etc/hosts
+shm              64M     0   64M   0% /dev/shm
+tmpfs          1000M  8.5M  992M   1% /run
+tmpfs           200M     0  200M   0% /run/user/0
+

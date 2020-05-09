@@ -1,0 +1,149 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>CMDB系统</title>
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.default.min.css" rel="stylesheet">
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/js/kendo.all.min.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        $('#Execute_all').click(function () {
+            var socket = new WebSocket("ws://" + window.location.host + "/asbui/index");
+            console.log(socket);
+            socket.onopen = function () {
+                console.log('WebSocket open');//成功连接上Websocket
+                socket.send($('#Execute_all').val());
+                socket.send($('#list_host').val());
+                socket.send($('#action').val());
+                socket.send($('#parameter').val());
+                //socket.send($('#parameter').val());//发送数据到服务端
+            };
+            socket.onmessage = function (e) {
+                console.log('message: ' + e.data);//打印服务端返回的数据
+                //$('#messagecontainer').prepend('<p><pre>' + e.data + '</pre></p>');
+                //$('#messagecontainer').prepend('<hr />');
+                $('#messagecontainer').append(e.data+'<br/>');
+                {#$('#messagecontainer').prepend('<hr />');#}
+
+            };
+        });
+    });
+
+     $(function () {
+        $('#update_time').click(function () {
+            var socket = new WebSocket("ws://" + window.location.host + "/asbui/index");
+            console.log(socket);
+            socket.onopen = function () {
+                console.log('WebSocket open');//成功连接上Websocket
+                socket.send($('#update_time').val());
+                socket.send($('#list_date').val());
+                socket.send($('#date_target').val());
+                //socket.send($('#parameter').val());//发送数据到服务端
+            };
+            socket.onmessage = function (e) {
+                console.log('message: ' + e.data);//打印服务端返回的数据
+                //$('#messagecontainer').prepend('<p><pre>' + e.data + '</pre></p>');
+                //$('#messagecontainer').prepend('<hr />');
+                $('#messagecontainer').append(e.data+'<br/>');
+                {#$('#messagecontainer').prepend('<hr />');#}
+
+            };
+        });
+    });
+</script>
+   <style type="text/css">
+    body,html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .left,
+    .right {
+      float: left;
+      width: 50%;
+      height: 100%;
+    }
+  </style>
+</head>
+{#<br>#}
+<body>
+<div style="margin:0 auto;width: 90%;">
+<br>
+<br>
+<br>
+<div class="left">
+    <form class="form-vertical p15">
+                <div class="form-group ">
+                    <label>选择环境：</label>
+                    <select class="form-control" style="height:30px;width:40%" id="list_date">
+                        <option value="qa1">qa1</option>
+                        <option value="qa2">qa2</option>
+                    </select>
+                </div>
+            </form>
+    <br>
+<div class="king-block-content plugin16_demo" id="time_slect">
+    选择时间：<span class="k-widget k-datetimepicker k-header form-control" style=""><span class="k-picker-wrap k-state-default"><input type="text" class="form-control k-input" id="date_target" placeholder="选择日期时间..." data-role="datetimepicker" role="combobox" aria-expanded="false" aria-disabled="false" aria-readonly="false" style="width: 40%;" aria-activedescendant="dd9df095-8a4f-4d2b-b209-f9ef29f48ae7_cell_selected"><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-calendar" role="button" aria-controls="plugin16_demo1_3_dateview">select</span>
+    <span
+    unselectable="on" class="k-icon k-i-clock" role="button" aria-controls="plugin16_demo1_3_timeview">select</span>
+        </span>
+        </span>
+        </span>
+</div>
+  <button style="margin: 20px;height: 40px;background-color: #42ff52;" type="button" id="update_time" value="update_time">
+    执行时间更新
+</button>
+<script type="text/javascript">
+    //时间日期选择
+    $("#date_target").kendoDateTimePicker({
+        value:new Date()
+    });
+</script>
+<br>
+<br>
+<br>
+ <form class="form-vertical p15">
+                <div class="form-group ">
+                    <label>环境：</label>
+                    <select class="form-control" style="height:30px;width:60%" id="list_host">
+                        <option value="qa1">qa1</option>
+                        <option value="qa2">qa2</option>
+                        <option value="cqc">cqc</option>
+                    </select>
+                </div>
+            </form>
+<br>
+               <div class="form-group ">
+                    <label>操作：</label>
+                    <select class="form-control" style="height:30px;width:60%" id="action">
+                        <option value="show_date">查看时间</option>
+                        <option value="gsrestart">重启游戏服务</option>
+                        <option value="ser_update">更新服务端</option>
+                        <option value="ios_cdn_update">更新ios-cdn</option>
+                        <option value="android_cdn_update">更新android-cdn</option>
+                    </select>
+                </div>
+            </form>
+<br>
+     <form class="form-vertical p15">
+         <div class="form-group ">
+         <label>参数：</label>
+         <input type="text" style="height:30px;width:60%" id="parameter" placeholder="更新时输入更新包名称"> </div>
+     </form>
+
+    <button style="margin: 20px;height: 40px;background-color: #19ff3d;" type="button" id="Execute_all" value="Execute_all">
+    开始启动更新
+</button>
+</div>
+<div class="right">
+<h3 style="margin: 20px;">执行结果:</h3>
+    <div id="scroll_div" style="overflow-y:scroll auto; overflow-x:scroll; height: 400px;width: 400;">
+<div id="messagecontainer" style="margin: 20px;">
+</div>
+    </div>
+<hr/>
+</div>
+</body>
+</html>

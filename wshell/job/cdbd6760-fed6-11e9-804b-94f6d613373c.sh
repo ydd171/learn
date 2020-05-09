@@ -1,0 +1,3 @@
+  ls
+date
+df  -h

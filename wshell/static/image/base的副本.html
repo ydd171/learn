@@ -1,0 +1,135 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- 若您需要使用Kendo UI Professional，请联系版权人获得合法的授权或许可。 -->
+    <!-- Bootstrap css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- kendo ui css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.default.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <!--蓝鲸提供的公用样式库 -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk_pack.css" rel="stylesheet">
+    <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <!-- 包括所有kendoui的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/js/kendo.all.min.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/bk/js/bk.js"></script>
+    <!-- 数据埋点统计 -->
+    <script src="http://magicbox.bk.tencent.com/static_api/analysis.js"></script>
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/html5shiv.min.js"></script><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/respond.min.js"></script><![endif]-->
+{% block css %}{% endblock %}
+</head>
+
+<body class="bg-white" data-bg-color="bg-white">
+    <div class="king-page-box">
+        <div class="king-layout1-header">
+            <nav>
+                <div style="width:100%;height:50px;" class="king-header king-header4 ">
+                    <div class="king-header-inner">
+                        <div class="king-header-brand">
+                            <a href="javascript:;">
+                                <img src="https://magicbox.bk.tencent.com/static_api/v3/components/horizontal_nav8/images/logo.png" height="30">
+                            </a>
+                        </div>
+                        <div class="king-header-list list2">
+                            <ul>
+                                <li> <a href="javascript:;"><i class="glyphicon glyphicon-shopping-cart"></i></a> </li>
+                                <li> <a href="javascript:;"><i class="glyphicon glyphicon-search"></i></a> </li>
+                            </ul>
+                        </div>
+                        <div class="king-header-list list1">
+                            <ul>
+                                <li class="active">
+                                    <a href="/bsl/index/" class="f14">
+                                        <span>首页</span>
+                                    </a>
+                                    <ul class="king-submenu"> </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="f14">
+                                        <span>JOB</span>
+                                    </a>
+                                    <ul class="king-submenu">
+                                        <li>
+                                            <a href="/bsl/add_job/">
+                                                <span>添加job</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/bsl/job_list/">
+                                                <span>任务列表</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/bsl/history_list/">
+                                                <span>执行记录</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <span>部署与管理</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <span>处理数据与分析</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="f14">
+                                        <span>管理主机</span>
+                                    </a>
+                                    <ul class="king-submenu">
+                                         <li>
+                                            <a href="/bsl/host_list/">
+                                                <span>主机列表</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/bsl/add_host/">
+                                                <span>增加主机</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="f14">
+                                        <span>合作伙伴</span>
+                                    </a>
+                                    <ul class="king-submenu">
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <span>计算机与网络</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="king-layout2-main mt15" style="width:960px;"></div>
+       {% block content %}{% endblock %}
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+    <div class="king-page-box">
+        <div class="king-layout1-header"></div>
+        <div class="king-layout2-main mt15" style="width:960px;">
+            <table class="table mb0 pr15 ranger-box2  ">
+                <thead>
+                    <tr>
+                        <th style="width: 10px;">#</th>
+                        <th style="width: 10%;">任务名称</th>
+                        <th style="width: 5%;">执行主机</th>
+                        <th style="width: 40%;">返回结果</th>
+                        <th style="width: 20%;">执行时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for item in history_lists %}
+                        <td style="width: 10px;">{{ item.id}}</td>
+                        <td style="width: 25px;">{{ item.jname }}</td>
+                        <td style="width: 15%;">{{ item.exec_host}}</td>
+                        <td style="width: 10%;">{{ item.exec_history }}</td>
+                        <td style="width: 15%;">{{ item.c_time|date:"Y-m-d H:i:s" }}</td>
+                        <td style="width: 1%;"></td>
+                            <td>
+                            <a href="/static/history_log/{{ item.exec_history }}"> <button type="button" class="king-btn mr10  king-success">查看</button></a>
+                        </td>
+
+                    </tr>
+                         {% endfor %}
+                </tbody>
+            </table>
+            <!-- 设置面板End -->
+        </div>
+    </div>
+{% endblock %}

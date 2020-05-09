@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> </title>
+<style type="text/css">
+#jqueryba{position:absolute;border:1px solid #333;background:#f7f5d1;padding:2px 5px;color:#333;display:none;}
+</style>
+<script type="text/javascript" src="/static/login/js/jquery.min.js"></script>
+<script language="javascript">
+this.jqueryba = function(){
+xOffset = 10;
+yOffset = 20;
+$("a.jqueryba").hover(function(e){  
+this.t = this.title;
+this.title = "";  
+$("body").append("<p id='jqueryba'>"+ this.t +"</p>");
+$("#jqueryba")
+.css("top",(e.pageY - xOffset) + "px")
+.css("left",(e.pageX + yOffset) + "px")
+.fadeIn("fast");
+    },
+function(){
+this.title = this.t;
+$("#jqueryba").remove();
+    });
+$("a.jqueryba").mousemove(function(e){
+$("#jqueryba")
+.css("top",(e.pageY - xOffset) + "px")
+.css("left",(e.pageX + yOffset) + "px");
+});
+};
+$(document).ready(function(){
+jqueryba();
+});
+</script>
+</head>
+<body>
+
+
+<p style="text-align:center"><a href="http://www.baidu.com" class="jqueryba" class="btn btn-default btn-detail" title="欢迎大家来我的小博客"><img width="30" height="30" src="/${res}/images/icon_detail.png"></a>前端开发</p>
+
+
+<div style="width:100%;height:600px;margin:0 auto"></div>
+</body>
+</html>
+————————————————
+版权声明：本文为CSDN博主「幻梦星空」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_25214695/java/article/details/50539759

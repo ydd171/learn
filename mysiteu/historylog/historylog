@@ -1,0 +1,160 @@
+2019-07-10 11:47:02    bash /tmp/update_time.sh qa1 "2019/7/10 11:45"
+2019-07-10 11:47:09    bash /tmp/update_time.sh qa1 "2019/7/10 11:45"
+2019-07-10 11:47:26    bash /tmp/update_time.sh qa1 "2019/7/10 11:45"
+2019-07-11 11:04:04   bash /tmp/update_time.sh qa1 "2019/7/11 11:04"
+2019-07-11 11:04:06   bash /tmp/test.sh qa1 show_date 
+2019-07-11 14:01:26   bash /tmp/test.sh qa1 show_date 
+2019-07-11 14:02:02   bash /tmp/update_time.sh qa1 "2019/7/11 14:02"
+2019-07-11 14:02:05   bash /tmp/test.sh qa1 ser_update 
+2019-07-11 14:02:09   bash /tmp/test.sh qa1 gsrestart 
+2019-07-11 14:02:13   bash /tmp/test.sh qa1 android_cdn_update 
+2019-07-11 14:20:49   bash /tmp/update_time.sh qa1 "2019/7/11 14:20"
+2019-07-11 14:26:39   bash /tmp/update_time.sh qa1 "2019/7/11 14:26"
+2019-07-11 14:27:15   bash /tmp/test.sh qa1 show_date 
+2019-07-11 14:29:46   bash /tmp/update_time.sh qa1 "2019/7/11 14:29"
+2019-07-11 14:31:04   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:08   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:09   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:09   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:09   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:10   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:10   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:10   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:11   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:11   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:11   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:11   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:31:12   bash /tmp/update_time.sh qa1 "2019/7/11 14:30"
+2019-07-11 14:34:46   bash /tmp/update_time.sh qa1 "2019/7/11 14:34"
+2019-07-11 14:42:52   bash /tmp/update_time.sh qa1 "2019/7/11 14:42"
+2019-07-11 15:00:20   bash /tmp/update_time.sh qa1 "2019/7/11 15:00"
+2019-07-11 15:20:54   bash /tmp/update_time.sh qa1 "2019/7/11 15:20"
+2019-07-11 15:20:56   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:26:19   bash /tmp/update_time.sh qa1 "2019/7/11 15:26"
+2019-07-11 15:26:20   bash /tmp/update_time.sh qa1 "2019/7/11 15:26"
+2019-07-11 15:26:22   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:26:44   bash /tmp/update_time.sh qa1 "2019/7/11 15:26"
+2019-07-11 15:26:45   bash /tmp/update_time.sh qa1 "2019/7/11 15:26"
+2019-07-11 15:26:46   bash /tmp/update_time.sh qa1 "2019/7/11 15:26"
+2019-07-11 15:27:36   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:37   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:37   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:37   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:38   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:38   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:38   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:38   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:39   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:39   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:39   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:39   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:39   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:40   bash /tmp/update_time.sh qa1 "2019/7/11 15:27"
+2019-07-11 15:27:43   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:27:44   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:28:18   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:18   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:19   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:19   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:19   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:19   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:19   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:20   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:20   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:20   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:20   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:20   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:21   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:22   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:29   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:28:33   bash /tmp/test.sh qa1 android_cdn_update 
+2019-07-11 15:28:47   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:48   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:48   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:48   bash /tmp/update_time.sh qa1 "2019/7/11 15:28"
+2019-07-11 15:28:49   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:28:51   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:28:51   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:28:52   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:28:53   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:28:56   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:28:57   bash /tmp/test.sh qa1 show_date 
+2019-07-11 15:35:34   bash /tmp/update_time.sh qa1 "2019/7/11 15:35"
+2019-07-11 16:27:17   bash /tmp/update_time.sh qa1 "2019/7/11 16:26"
+2019-07-11 16:36:23   bash /tmp/update_time.sh qa1 "2019/7/11 16:36"
+2019-07-11 16:36:26   bash /tmp/test.sh qa1 show_date 
+2019-07-11 16:45:58   bash /tmp/test.sh qa2 gsrestart 
+2019-07-11 16:47:34   bash /tmp/update_time.sh qa1 "2019/7/11 16:47"
+2019-07-11 16:47:35   bash /tmp/update_time.sh qa1 "2019/7/11 16:47"
+2019-07-11 17:13:42   bash /tmp/update_time.sh qa1 "2019/7/11 17:04"
+2019-07-11 17:16:50   bash /tmp/test.sh qa1 show_date qwqwqeqw1222dsddsdssddsddsddsdfsdfds
+2019-07-12 10:49:42   bash /tmp/test.sh qa1 ios_cdn_update 
+2019-07-12 10:53:18   bash /script/Execute_all.sh qa1 ser_update 
+2019-07-12 10:53:43   bash /script/Execute_all.sh qa1 ser_update 123
+2019-07-12 19:59:19   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 19:59:21   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 19:59:22   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 19:59:22   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 19:59:22   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 19:59:22   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 19:59:23   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 19:59:27   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 19:59:27   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 19:59:27   bash /script/update_time.sh qa1 "2019/7/12 19:59"
+2019-07-12 20:13:21   bash /script/update_time.sh qa1 "2019/7/12 20:13"
+2019-07-12 20:17:18   bash /script/update_time.sh qa1 "2019/7/12 20:17"
+2019-07-12 20:26:12   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 20:26:13   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 20:26:14   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 20:26:14   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 20:26:14   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 20:26:14   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 20:26:15   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 20:26:15   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 20:26:16   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 20:28:32   bash /script/update_time.sh qa1 "2019/7/12 20:28"
+2019-07-12 20:28:33   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 21:25:30   bash /script/update_time.sh qa1 "2019/7/12 21:25"
+2019-07-12 21:25:31   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 21:25:32   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 21:25:33   bash /script/update_time.sh qa1 "2019/7/12 21:25"
+2019-07-12 21:25:34   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 21:25:35   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 21:25:37   bash /script/update_time.sh qa1 "2019/7/12 21:25"
+2019-07-12 21:25:51   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 21:27:37   bash /script/Execute_all.sh qa1 show_date 
+2019-07-12 21:46:50   bash /script/update_time.sh qa1 "2019/7/12 21:27"
+2019-07-15 15:53:58   bash /script/update_time.sh qa1 "2019/7/15 15:53"
+2019-07-15 16:16:29   bash /script/Execute_all.sh qa1 show_date show_date
+2019-07-15 16:16:47   bash /script/Execute_all.sh qa1 show_date show_date
+2019-07-15 16:16:48   bash /script/Execute_all.sh qa1 show_date show_date
+2019-07-15 16:16:49   bash /script/Execute_all.sh qa1 show_date show_date
+2019-07-15 16:16:50   bash /script/Execute_all.sh qa1 show_date show_date
+2019-07-15 16:16:51   bash /script/Execute_all.sh qa1 show_date show_date
+2019-07-15 16:16:52   bash /script/Execute_all.sh qa1 show_date show_date
+2019-07-15 16:16:53   bash /script/Execute_all.sh qa1 show_date show_date
+2019-07-15 16:24:10   bash /script/Execute_all.sh qa1 show_date 121212
+2019-07-15 16:34:15   bash /script/Execute_all.sh qa1 show_date
+2019-07-15 16:34:18   bash /script/Execute_all.sh qa1 show_date 123123
+2019-07-15 16:40:19   bash /script/update_time.sh qa1 "2019/7/15 16:40"
+2019-07-15 16:40:20   bash /script/update_time.sh qa1 "2019/7/15 16:40"
+2019-07-15 16:40:22   bash /script/update_time.sh qa1 "2019/7/15 16:40"
+2019-07-15 16:40:24   bash /script/Execute_all.sh qa1 show_date
+2019-07-15 18:00:01   bash /script/update_time.sh qa1 "2019/7/15 17:59"
+2019-07-15 18:00:02   bash /script/update_time.sh qa1 "2019/7/15 17:59"
+2019-07-15 19:30:42   bash /script/Execute_all.sh qa1 show_date
+2019-07-15 19:30:51   bash /script/Execute_all.sh qa1 show_date
+2019-07-15 19:32:36   bash /script/Execute_all.sh qa1 show_date
+2019-07-15 19:33:24   bash /script/Execute_all.sh qa1 show_date
+2019-07-15 19:33:27   bash /script/Execute_all.sh qa2 show_date
+2019-07-16 11:49:48   bash /script/Execute_all.sh qa2 gsrestart
+2019-07-17 14:24:53   bash /script/Execute_all.sh qa1 ser_update
+2019-07-17 14:25:51   bash /script/Execute_all.sh qa1 ser_update
+2019-07-17 14:25:58   bash /script/Execute_all.sh qa1 srv_update
+2019-07-17 15:46:38   bash /script/Execute_all.sh qa1 srv_update 121212
+2019-07-17 18:16:11   bash /script/Execute_all.sh qa1 ios_cdn_update 121212
+2019-07-17 21:42:08   bash /script/Execute_all.sh qa1 ios_cdn_update 121212
+2019-07-17 21:42:31   bash /script/Execute_all.sh qa1 show_date
+2019-07-17 21:51:51   bash /script/Execute_all.sh qa1 show_date
+2019-07-18 15:37:15   bash /script/Execute_all.sh qa1 ios_cdn_update 12312
+2019-07-18 17:30:01   bash /script/Execute_all.sh qa1 android_cdn_update 12312

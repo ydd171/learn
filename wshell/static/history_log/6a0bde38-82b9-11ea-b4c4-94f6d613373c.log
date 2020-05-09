@@ -1,0 +1,19 @@
+anaconda-ks.cfg
+Mon Apr 20 11:45:45 CST 2020
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          59G  5.5G   50G  10% /
+tmpfs            64M     0   64M   0% /dev
+tmpfs          1000M     0 1000M   0% /sys/fs/cgroup
+osxfs           466G  119G  343G  26% /tmp
+/dev/sda1        59G  5.5G   50G  10% /etc/hosts
+shm              64M     0   64M   0% /dev/shm
+tmpfs          1000M  8.5M  992M   1% /run
+tmpfs           200M     0  200M   0% /run/user/0
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+inet 172.17.0.2  netmask 255.255.0.0  broadcast 172.17.255.255
+ether 02:42:ac:11:00:02  txqueuelen 0  (Ethernet)
+RX packets 2438  bytes 271216 (264.8 KiB)
+RX errors 0  dropped 0  overruns 0  frame 0
+TX packets 2087  bytes 336070 (328.1 KiB)
+TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+

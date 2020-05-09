@@ -1,0 +1,26 @@
+{% extends 'asbui/base.html' %}
+{% load staticfiles %}
+{% block title %}登录{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <style>
+    .container{
+      padding-top: 5px;
+      width: 80%;
+      border: 2px dashed rgba(49, 66, 255, 0.41);
+    }
+    </style>
+    <h6 style="margin: 5px;">最近50次操作:</h6>
+    <div class="container">
+    <div id="scroll_div" style="overflow-x:scroll; height: 500px;width: 100%;">
+        <p style="margin: 30px">
+            {% for item in messagelog %}
+            <p style="margin: 30px"> {{ item }} </p>
+            {% endfor %}
+    </div>
+    </div>
+{% endblock %}

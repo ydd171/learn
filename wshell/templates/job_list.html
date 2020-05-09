@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+    <div class="king-page-box">
+        <div class="king-layout1-header"></div>
+        <div class="king-layout2-main mt15" style="width:960px;">
+            <table class="table mb0 pr15 ranger-box2  ">
+                <thead>
+                    <tr>
+                        <th style="width: 10px;">#</th>
+                        <th style="width: 10%;">脚本名称</th>
+                        <th style="width: 35%;">ID名称</th>
+                        <th style="width: 10%;">创建时间</th>
+                        <th style="width: 10%;">类型</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for item in job_lists %}
+                        <td style="width: 10px;">{{ item.id }}</td>
+                        <td style="width: 10%;">{{ item.jname }}</td>
+                        <td style="width: 15%;">{{ item.jid }}</td>
+                        <td style="width: 25%;">{{ item.c_time|date:"Y-m-d H:i:s" }}</td>
+                        <td style="width: 5%;">shell</td>
+                        <td style="width: 5%;"></td>
+                        <td>
+                            <a href="/bsl/run_job/?id={{ item.id  }}"> <button class="btn btn-xs btn-success"> <i class="glyphicon glyphicon-ok"></i></button></a>
+                            <a href="/bsl/edit_job/?id={{ item.id  }}"> <button class="btn btn-xs btn-warning"> <i class="glyphicon glyphicon-edit"></i> </button></a>
+                            <a href="/bsl/delete_job/?id={{ item.id  }}"> <button class="btn btn-xs btn-danger"> <i class="glyphicon glyphicon-remove"></i> </button></a>
+                        </td>
+                    </tr>
+                         {% endfor %}
+                </tbody>
+            </table>
+            <!-- 设置面板End -->
+        </div>
+    </div>
+{% endblock %}

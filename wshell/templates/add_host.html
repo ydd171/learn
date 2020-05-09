@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+    <div class="king-page-box">
+        <div class="king-layout1-header"></div>
+        <div class="king-layout2-main mt15" style="width:960px;">
+            <form class="form-horizontal"method="post">
+                {% csrf_token %}
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">主机名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="hostname" placeholder="host name"> </div>
+                </div>
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">用户名：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="username" placeholder="username"> </div>
+                </div>
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">IP：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="ip" placeholder="host IP"> </div>
+                </div>
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">port：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="port" placeholder="host port"> </div>
+                </div>
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">备注：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="infro" placeholder="备注信息"> </div>
+                </div>
+                <div class="form-group has-feedback clearfix f14">
+                    <label class="control-label col-sm-3 pt0" for="introduction">密钥：</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="3" placeholder="pem文件" name="pem" style="margin: 0px; height: 324px; width: 710px;"></textarea>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="king-btn mr10  king-success">提交</button>
+                        <a href="/bsl/host_list/"> <button type="button" class="king-btn king-default ">取消</button> </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

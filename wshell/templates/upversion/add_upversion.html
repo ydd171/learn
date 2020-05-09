@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+    <div class="king-page-box">
+        <div class="king-layout1-header"></div>
+        <div class="king-layout2-main mt15" style="width:960px;">
+            <form class="form-horizontal"method="post">
+                {% csrf_token %}
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">更新名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="up_name" placeholder="update name"> </div>
+                </div>
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">服务器包名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="ser_name" placeholder="server package name"> </div>
+                </div>
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">IOS客户端包：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="ios_cname" placeholder="ios package name"> </div>
+                </div>
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">AOS客户端包：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="aos_cname" placeholder="aos package name"> </div>
+                </div>
+                <div class="form-group clearfix ">
+                    <label class="col-sm-3 control-label bk-lh30 pt0">更新环境：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control bk-valign-top" name="env" placeholder="environment"> </div>
+                </div>
+                <div class="form-group has-feedback clearfix f14">
+                    <label class="control-label col-sm-3 pt0" for="introduction">说明：</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="3" placeholder="更新说明" name="up_info" style="margin: 0px; height: 324px; width: 710px;"></textarea>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="king-btn mr10  king-success">提交</button>
+                        <button type="button" class="king-btn king-default ">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

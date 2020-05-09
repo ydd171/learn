@@ -1,0 +1,25 @@
+{
+    "code":0,
+    "result": true,
+    "messge":"success",
+    "data": {
+        "title": "总揽",
+        "series":[{
+            "value":335,
+            "name":"任务记录"
+        }, {
+            "value":310,
+            "name":"执行记录"
+        }, {
+            "value": 234,
+            "name": "主机数量"
+        }, {
+            "value": 135,
+            "name": "登陆次数"
+        }, {
+            "value": 4,
+            "name": "用户数"
+        }]
+    }
+
+}

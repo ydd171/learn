@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+<link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/artDialog-6.0.4/css/ui-dialog.css" rel="stylesheet">
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/artDialog-6.0.4/dist/dialog-min.js"></script>
+    <div class="king-page-box">
+        <div class="king-layout1-header">
+            <div class="king-instruction  king-instruction-info ">
+                <h5>提示说明</h5>
+                <p>您可以设置应用运行时的环境变量，在进行测试部署和正式部署操作时会生效</p>
+                <p>{{ messagelog }}</p>
+            </div>
+        </div>
+        <div class="king-layout2-main mt15" style="width:960px;">
+            <div class="king-pearls king-pearls king-justified-pearls">
+                <div  class="king-pearl done">
+                    <a href="/bsl/ShowJob_update"> <span class="king-pearl-number ">1</span></a>
+                    <span class="king-pearl-title ">查看任务</span>
+                </div>
+                <div class="king-pearl ">
+                    <span class="king-pearl-number ">2</span>
+                    <span class="king-pearl-title ">执行</span>
+                </div>
+                <div class="king-pearl">
+                    <span class="king-pearl-number ">3</span>
+                    <span class="king-pearl-title ">完成</span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
