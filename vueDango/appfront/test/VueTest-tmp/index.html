@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>todolist</title>
+    <script src="./vue.js"></script>
+	</head>
+	<body>
+    <div id="root">
+    <div>
+      <input v-model="inputValue" />
+      <button type="button" @click="handleSubmit">按钮</button>
+    </div>
+    <ul>
+      <todo-item v-for="(item,index) of list" :key=index :content="item"></todo-item>
+    </ul>
+    </div>
+
+    <script>
+      Vue.component('todo-item',{
+        props: ['content'],
+        template: '<li>{{content}}</li>'
+      })
+
+      new Vue({
+        el: "#root",
+
+        data: {
+          inputValue: '',
+          list: []
+        },
+        methods: {
+          handleSubmit: function() {
+            this.list.push(this.inputValue)
+            this.inputValue = ''
+          }
+        }
+
+
+      })
+    </script>
+	</body>
+</html>
