@@ -11,3 +11,5 @@ wshell使用channels.generic.websocket实现命令实时输出。功能实现：
 6.历史记录，提供查询执行记录和执行结果的功能。
 7.饼状图展示数据功能。
 8.版本发布流程初级功能。
+
+vuedjango 为功能模板。通过vue + django +python实现前端查询mysql内容，并提供execl导出功能。
