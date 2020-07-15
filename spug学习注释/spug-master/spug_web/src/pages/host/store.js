@@ -3,10 +3,10 @@
  * Copyright (c) <spug.dev@gmail.com>
  * Released under the AGPL-3.0 License.
  */
-import { observable } from "mobx";
+import { observable } from "mobx"; //定义淘宝mobx框架
 import http from 'libs/http';
 
-class Store {
+class Store {   //初始化数据
   @observable records = [];
   @observable zones = [];
   @observable permRecords = [];
@@ -22,21 +22,21 @@ class Store {
 
   fetchRecords = () => {
     this.isFetching = true;
-    return http.get('/api/host/')
-      .then(({hosts, zones, perms}) => {
+    return http.get('/api/host/')  //向后端请求数据
+      .then(({hosts, zones, perms}) => {  //数据提取
         this.records = hosts;
         this.zones = zones;
-        this.permRecords = hosts.filter(item => perms.includes(item.id));
-        for (let item of hosts) {
-          this.idMap[item.id] = item
+        this.permRecords = hosts.filter(item => perms.includes(item.id)); //从权限数据中检查是否包含主机id
+        for (let item of hosts) { //循环获取hosts
+          this.idMap[item.id] = item //给idMap赋值
         }
       })
-      .finally(() => this.isFetching = false)
+      .finally(() => this.isFetching = false) //初始化isFetching
   };
 
-  showForm = (info = {}) => {
+  showForm = (info = {}) => { //调用显示form表单函数
     this.formVisible = true;
-    this.record = info
+    this.record = info //显示空数据
   }
 }
 

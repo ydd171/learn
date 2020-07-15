@@ -20,7 +20,7 @@ class SSH:
             'password': password,
             'pkey': RSAKey.from_private_key(StringIO(pkey)) if isinstance(pkey, str) else pkey,
             'timeout': connect_timeout,
-        }
+        }  #init为建立传输通道的模块，只建立通道，不会执行任何操作，除非调用了它。
 
     @staticmethod
     def generate_key():
@@ -55,7 +55,7 @@ class SSH:
             sftp.put(local_path, remote_path)
             sftp.close()
 
-    def exec_command(self, command, timeout=1800, environment=None):
+    def exec_command(self, command, timeout=1800, environment=None): #执行命令，命令执行结束，通道就会关闭。
         command = 'set -e\n' + command
         with self as cli:
             chan = cli.get_transport().open_session()

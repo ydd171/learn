@@ -18,18 +18,19 @@ import socket
 
 
 class HostView(View):
-    def get(self, request):
-        host_id = request.GET.get('id')
-        if host_id:
-            if not request.user.has_host_perm(host_id):
-                return json_response(error='无权访问该主机，请联系管理员')
-            return json_response(Host.objects.get(pk=host_id))
-        hosts = Host.objects.filter(deleted_by_id__isnull=True)
-        zones = [x['zone'] for x in hosts.order_by('zone').values('zone').distinct()]
-        perms = [x.id for x in hosts] if request.user.is_supper else request.user.host_perms
-        return json_response({'zones': zones, 'hosts': [x.to_dict() for x in hosts], 'perms': perms})
+    def get(self, request):  #定义get返回函数
+        host_id = request.GET.get('id') #判断前端是否带有host_id参数请求
+        if host_id: #如果带host_id参数
+            if not request.user.has_host_perm(host_id): #判断用户使用有权限
+                return json_response(error='无权访问该主机，请联系管理员') #返回无权限提示信息
+            return json_response(Host.objects.get(pk=host_id)) #有权限则返回host_id
+        hosts = Host.objects.filter(deleted_by_id__isnull=True)  #从数据库获取hosts信息（id不为空）
+        zones = [x['zone'] for x in hosts.order_by('zone').values('zone').distinct()] #从hosts中获取zones信息
+        perms = [x.id for x in hosts] if request.user.is_supper else request.user.host_perms #分离权限信息
+        return json_response({'zones': zones, 'hosts': [x.to_dict() for x in hosts], 'perms': perms}) #返回区域，主机，权限等信息
+		
 
-    def post(self, request):
+    def post(self, request):   #定义更新主机信息的函数
         form, error = JsonParser(
             Argument('id', type=int, required=False),
             Argument('zone', help='请输入主机类型'),
@@ -42,7 +43,7 @@ class HostView(View):
         ).parse(request.body)
         if error is None:
             if valid_ssh(form.hostname, form.port, form.username, form.pop('password')) is False:
-                return json_response('auth fail')
+                return json_response('auth fail')  #提示连接认证失败
 
             if form.id:
                 Host.objects.filter(pk=form.pop('id')).update(**form)
@@ -140,9 +141,9 @@ def post_import(request):
 
 def valid_ssh(hostname, port, username, password, with_expect=True):
     try:
-        private_key = AppSetting.get('private_key')
+        private_key = AppSetting.get('private_key')  #定义私钥公钥
         public_key = AppSetting.get('public_key')
-    except KeyError:
+    except KeyError: #错误检查
         private_key, public_key = SSH.generate_key()
         AppSetting.set('private_key', private_key, 'ssh private key')
         AppSetting.set('public_key', public_key, 'ssh public key')

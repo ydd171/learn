@@ -16,8 +16,8 @@ export default class StatisticCard extends React.Component {
     }
   }
   componentDidMount() {
-    http.get('/api/home/statistic/')
-      .then(res => this.setState({res}))
+    http.get('/api/home/statistic/')  //请求数据
+      .then(res => this.setState({res}))  //数据保存在变量res
       .finally(() => this.setState({loading: false}))
   }
 

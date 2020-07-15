@@ -20,7 +20,7 @@ export default class AlarmTrend extends React.Component {
   }
 
   componentDidMount() {
-    http.get('/api/home/deploy/')
+    http.get('/api/home/deploy/') //调用版本发布统计api
       .then(res => this.setState(res))
       .finally(() => this.setState({loading: false}))
   }

@@ -45,7 +45,7 @@ def do_task(request):
     form, error = JsonParser(
         Argument('host_ids', type=list, filter=lambda x: len(x), help='请选择执行主机'),
         Argument('command', help='请输入执行命令内容')
-    ).parse(request.body)
+    ).parse(request.body) #判断host_ids和command是否存在，不存在则返回错误（help定义了返回类型，关联在libs目录下面parser.py）。
     if error is None:
         if not request.user.has_host_perm(form.host_ids):
             return json_response(error='无权访问主机，请联系管理员')

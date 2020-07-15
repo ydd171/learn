@@ -13,10 +13,10 @@ import 'xterm/css/xterm.css';
 import styles from './index.module.css';
 
 
-class WebSSH extends React.Component {
-  constructor(props) {
-    super(props);
-    this.id = props.match.params.id;
+class WebSSH extends React.Component {  //创建webssh组件
+  constructor(props) {  //创建props参数
+    super(props);  //声明props参数父类，与React.Component配套使用
+    this.id = props.match.params.id; //初始化参数值
     this.token = localStorage.getItem('token');
     this.socket = null;
     this.term = new Terminal();

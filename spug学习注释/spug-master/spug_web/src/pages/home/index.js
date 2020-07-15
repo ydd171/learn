@@ -11,11 +11,11 @@ import AlarmTrend from './AlarmTrend';
 import RequestTop from './RequestTop';
 import DeployPie from './DeployPie';
 
-class HomeIndex extends React.Component {
+class HomeIndex extends React.Component {  //定义类
   render() {
     return (
       <AuthDiv auth="home.home.view">
-        <StatisticsCard/>
+        <StatisticsCard/>   //调用静态显示模块
         <AlarmTrend/>
         <Row style={{marginTop: 20}}>
           <Col span={13}>

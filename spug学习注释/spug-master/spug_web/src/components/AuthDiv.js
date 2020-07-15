@@ -7,7 +7,7 @@ import React from 'react';
 import { hasPermission } from "../libs";
 
 
-export default function AuthDiv(props) {
+export default function AuthDiv(props) {  //根据权限选择页面是否显示
   let disabled = props.disabled === undefined ? false : props.disabled;
   if (props.auth && !hasPermission(props.auth)) {
     disabled = true;
